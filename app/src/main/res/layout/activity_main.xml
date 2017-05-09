@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elite.polito.it.simplecalculator.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/number1Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Number 1" />
+
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/number1Title"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="number|numberSigned"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/number2Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/number1"
+            android:layout_marginTop="9dp"
+            android:text="Number 2" />
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/number2Title"
+            android:ems="10"
+            android:inputType="number|numberSigned"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/resultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="Result"
+            android:textSize="24sp"
+            android:layout_below="@+id/timesButton"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24sp"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/resultTitle"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/timesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/minusButton"
+            android:layout_alignBottom="@+id/minusButton"
+            android:layout_toEndOf="@+id/minusButton"
+            android:onClick="times"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/number2"
+            android:layout_marginTop="10dp"
+            android:onClick="plus"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/plusButton"
+            android:layout_alignBottom="@+id/plusButton"
+            android:layout_toEndOf="@+id/plusButton"
+            android:onClick="minus"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/divButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/timesButton"
+            android:layout_alignBottom="@+id/timesButton"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/timesButton"
+            android:onClick="division"
+            android:text="/" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
