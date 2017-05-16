@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,7 +73,16 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = (EditText) findViewById(R.id.number2);
         int number2 = Integer.parseInt(secondNumber.getText().toString());
         //perform the operation
-        int result = number1 / number2;
+        int result = 0;
+        if (number2!=0) {
+            result = number1 / number2;
+        }
+        else
+        {
+            //A toast provides simple feedback about an operation in a small popup
+            Toast toast = Toast.makeText(this, "It is not possible to divide by 0", Toast.LENGTH_LONG);
+            toast.show();
+        }
         //print the result in the TextView with id result
         TextView resultTextView = (TextView) findViewById(R.id.result);
         resultTextView.setText(String.valueOf(result));
